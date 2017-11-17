@@ -20,7 +20,7 @@ if (!process.argv[2]) {
 }
 
 var Pipedrive = require(__dirname + '/../index');
-var pipedrive = new Pipedrive.Client(process.argv[2]);
+var pipedrive = new Pipedrive(process.argv[2]);
 var _ = require('lodash');
 
 pipedrive.Filters.getAll({ type: 'deals' }, function(filtersListErr, filtersList) {

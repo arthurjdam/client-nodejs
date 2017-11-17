@@ -42,7 +42,7 @@ if (!process.argv[2]) {
 }
 
 var Pipedrive = require(__dirname + '/../index');
-var pipedrive = new Pipedrive.Client(process.argv[2], { strictMode: true });
+var pipedrive = new Pipedrive(process.argv[2], { strictMode: true });
 var _ = require('lodash');
 
 var start = Date.now();
