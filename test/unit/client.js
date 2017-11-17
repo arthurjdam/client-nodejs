@@ -4,7 +4,7 @@ describe('client module', function() {
 
 	it('should expose some of the main object types', function() {
 		var Pipedrive = require('./../..'),
-			pipedrive = new Pipedrive.Client('apitoken'),
+			pipedrive = new Pipedrive('apitoken'),
 			blueprint = require('./../../lib/blueprint');
 
 		// iterate through all top level objects which should be exposed, e.g. pipedrive.Deals, ...
@@ -15,7 +15,7 @@ describe('client module', function() {
 
 	it('should expose .on() listener in strict mode', function() {
 		var Pipedrive = require('./../..'),
-			pipedrive = new Pipedrive.Client('apitoken', { strictMode: true });
+			pipedrive = new Pipedrive('apitoken', { strictMode: true });
 
 		should(pipedrive.on).be.a.Function();
 	});
